@@ -1,0 +1,5 @@
+.THIS.tab {
+    background-color: white;
+    font-family: FreeMono, monospace;
+    color: green;
+}
