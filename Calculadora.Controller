@@ -1,0 +1,38 @@
+({
+		Somar : function(component, event, helper) {
+        var n1 = component.find("n1").get("v.value");
+        var n2 = component.find("n2").get("v.value");
+        var result = Number(n1) + Number(n2);
+        component.set('v.soma', result);
+	},
+    
+    	Subt : function(component, event, helper) {
+        var n1 = component.find("n3").get("v.value");
+        var n2 = component.find("n4").get("v.value");
+        var result = Number(n1) - Number(n2);
+        component.set('v.subt', result);
+	},
+    
+    	Mult : function(component, event, helper) {
+        var n1 = component.find("n5").get("v.value");
+        var n2 = component.find("n6").get("v.value");
+        var result = Number(n1) * Number(n2);
+        component.set('v.mult', result);
+	},
+    
+    
+    	Div : function(component, event, helper) {
+        var n1 = component.find("n7").get("v.value");
+        var n2 = component.find("n8").get("v.value");
+        var result = Number(n1) / Number(n2);
+        component.set('v.div', result);
+	},
+    
+    	Apagar : function(component, event, helper) {
+        component.set("v.soma", "");
+        component.set("v.subt", "");
+        component.set("v.mult", "");
+        component.set("v.div", "");
+            
+    }
+})
