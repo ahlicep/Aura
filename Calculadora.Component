@@ -1,0 +1,87 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name = "soma" type = "Integer"></aura:attribute>
+    <aura:attribute name = "subt" type = "Integer"></aura:attribute>
+    <aura:attribute name = "div" type = "Integer"></aura:attribute>
+    <aura:attribute name = "mult" type = "Integer"></aura:attribute>
+
+	<aura:attribute name="apaga" type="String" default=""> </aura:attribute>
+    
+    <div class="tab">
+        
+            <lightning:tabset selectedTabId="tab">
+                 
+            	<lightning:tab label="Somar!" id="um">
+            		<div class ="slds-grid slds-no-flex slds-align_absolute-center">
+        			<div class="slds col slds-size_5-of-12 ">
+            
+            <lightning:input type="number" aura:id="n1" label="Insira um número:"/>
+            <lightning:input type="number" aura:id="n2" label="Insira um número:"/>
+        
+        		<div>
+            <br/>
+            <lightning:button variant="brand" label = "Somar!" onclick = "{! c.Somar}"/>
+            <p>Resultado: {!v.soma}</p>
+            <br/>
+			<span><lightning:button variant="destructive" label="Apagar" title="Apagar" onclick="{! c.Apagar }"/></span>
+        		</div>
+        			</div>
+    				</div>
+        		</lightning:tab>
+                 
+        <lightning:tab label="Subtrair!" id="dois">
+            <div class ="slds-grid slds-no-flex slds-align_absolute-center">
+        	<div class="slds col slds-size_5-of-12 ">
+            <lightning:input type="number" aura:id="n3" label="Insira um número:"/>
+            <lightning:input type="number" aura:id="n4" label="Insira um número:"/>
+        
+        <div>
+            <br/>
+            <lightning:button variant="brand" label = "Subtrair!" onclick = "{! c.Subt}"/>
+            <br/>
+            <p>Resultado: {!v.subt}</p>
+			<span><lightning:button variant="destructive" label="Apagar" title="Apagar" onclick="{! c.Apagar }"/></span>
+
+        </div>
+        </div>
+    </div>
+        </lightning:tab>
+                 
+        <lightning:tab label="Multiplicar!" id="tres">
+            <div class ="slds-grid slds-no-flex slds-align_absolute-center">
+        	<div class="slds col slds-size_5-of-12 ">
+            <lightning:input type="number" aura:id="n5" label="Insira um número:"/>
+            <lightning:input type="number" aura:id="n6" label="Insira um número:"/>
+        
+        <div>
+            <br/>
+            <lightning:button variant="brand" label = "Multiplicar!" onclick = "{! c.Mult}"/>
+            <p>Resultado: {!v.mult}</p>
+            <br/>
+			<span><lightning:button variant="destructive" label="Apagar" title="Apagar" onclick="{! c.Apagar }"/></span>
+
+        </div>
+        </div>
+    </div>
+        </lightning:tab>
+                 
+                 <lightning:tab label="Dividir!" id="quatro">
+            <div class ="slds-grid slds-no-flex slds-align_absolute-center">
+        	<div class="slds col slds-size_5-of-12 ">
+            <lightning:input type="number" aura:id="n7" label="Insira um número:"/>
+            <lightning:input type="number" aura:id="n8" label="Insira um número:"/>
+        
+        <div>
+            <br/>
+            <lightning:button variant="brand" label = "Dividir!" onclick = "{! c.Div}"/>
+            <br/>
+            <p>Resultado: {!v.div}</p>
+			<span><lightning:button variant="destructive" label="Apagar" title="Apagar" onclick="{! c.Apagar }"/></span>
+
+        </div>
+        </div>
+    </div>
+        </lightning:tab>
+    		</lightning:tabset>
+    </div>
+
+</aura:component>
