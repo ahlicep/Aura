@@ -1,5 +1,13 @@
 ({
-	CriarLead : function(component, event, helper) {
-        alert('Lead criado com sucesso :)');
-	}
-})
+    showToast : function(component, event, helper) {
+    var toastEvent = $A.get("e.force:showToast");
+    toastEvent.setParams({
+			"title": "Sucesso!",
+            "message": "Lead criado com sucesso.",
+        	"type": 'success'
+    });
+    toastEvent.fire();
+        $A.get('e.force:refreshView').fire();
+}
+    
+});
