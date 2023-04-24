@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    
+    <lightning:recordEditForm aura:id="recordEditForm"
+                           objectApiName="ListaCompras__c"
+                           onsuccess="{!c.showToast}">
+        <lightning:messages />
+        <div class="containerprincipal"><center>Lista de Compras para o Escritório:</center>
+    	<div class="slds-box slds-theme_default">
+        <div class="slds-grid">
+  		<div class="slds-col slds-p-horizontal_medium">
+
+        <lightning:inputField fieldName="Name" />
+        <lightning:inputField fieldName="DataCompra__c" aura:id="field" />
+        <lightning:inputField fieldName="PrecoUnitario__c" aura:id="field" />
+        <lightning:inputField fieldName="PrecoTotal__c" aura:id="field" />
+
+		</div>
+        </div>
+        </div>
+        
+        <center><lightning:button class="slds-m-top_small" type="submit" label="Criar!"/></center>	
+		
+        </div>
+            
+    </lightning:recordEditForm>
+
+    
+</aura:component>
