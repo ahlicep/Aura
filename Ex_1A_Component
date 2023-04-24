@@ -2,7 +2,8 @@
 	
     
     <lightning:recordEditForm aura:id="recordEditForm"
-                           objectApiName="Lead">
+                           objectApiName="Lead"
+                           onsuccess="{!c.showToast}">
         <lightning:messages />
         
     	<div class="slds-box slds-theme_default">
@@ -16,7 +17,7 @@
 		</div>
         </div>
         
-        <center><lightning:button class="slds-m-top_small" type="submit" label="Criar Lead!" onclick="{!c.CriarLead}"/></center>	
+        <center><lightning:button class="slds-m-top_small" type="submit" label="Criar Lead!"/></center>	
 		
         </div>
             
