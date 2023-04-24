@@ -1,0 +1,5 @@
+.THIS .titulo {
+    background-color: white;
+    font-size: 18px;
+    color: pink;
+}
